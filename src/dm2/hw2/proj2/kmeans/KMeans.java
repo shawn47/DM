@@ -156,7 +156,7 @@ public class KMeans {
         List<Location> data = new ArrayList<Location>();
         BufferedReader in = null;
         try {
-            String fileName = "E:\\作业\\数据仓储\\2\\382108905_3_第二次作业\\第二次作业\\任务二\\data.txt";
+            String fileName = "/Data/data.txt";
             in = new BufferedReader(new FileReader(fileName));
             String line = null;
             while((line = in.readLine()) != null) {
@@ -219,6 +219,7 @@ public class KMeans {
     
     public static void main(String[] args) {
     	KMeans kmeans = new KMeans(11);
+      // repeat the clustering 
     	kmeans.nextState();
     	kmeans.nextState();
     }
