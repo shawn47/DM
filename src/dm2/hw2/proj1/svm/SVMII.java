@@ -1,4 +1,4 @@
-package dm2.hw2.proj1.ann;
+package dm2.hw2.proj1.svm;
 
 import java.io.BufferedReader;
 import java.io.File;

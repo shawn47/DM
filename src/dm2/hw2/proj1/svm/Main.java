@@ -1,4 +1,4 @@
-package dm2.hw2.proj1.ann;
+package dm2.hw2.proj1.svm;
 
 import java.io.IOException;
 
@@ -23,32 +23,32 @@ public class Main {
 		double[][] X2 = new double[trainset_size - 30*5][attr_num];
 		
 		SVMII svm = new SVMII(0.0001);
-		String trainFile = "E:\\作业\\数据仓储\\2\\simpleSvm-master\\simpleSvm-master\\train_all.data";
+		String trainFile = "/Data/train_all.data";
 		svm.loadData(X,y,trainFile, "BRICKFACE");
 		svm.Train(X,y,7000);
 		
 		SVMII svm1 = new SVMII(0.0001);
-		trainFile = "E:\\作业\\数据仓储\\2\\simpleSvm-master\\simpleSvm-master\\train_6.data";
+		trainFile = "/Data/train_6.data";
 		svm.loadData(X6,y6,trainFile, "SKY");
 		svm1.Train(X6,y6,7000);
 		
 		SVMII svm2 = new SVMII(0.0001);
-		trainFile = "E:\\作业\\数据仓储\\2\\simpleSvm-master\\simpleSvm-master\\train_5.data";
+		trainFile = "/Data/train_5.data";
 		svm.loadData(X5,y5,trainFile, "FOLIAGE");
 		svm2.Train(X5,y5,7000);
 		
 		SVMII svm3 = new SVMII(0.0001);
-		trainFile = "E:\\作业\\数据仓储\\2\\simpleSvm-master\\simpleSvm-master\\train_4.data";
+		trainFile = "/Data/train_4.data";
 		svm3.loadData(X4,y4,trainFile, "CEMENT");
 		svm3.Train(X4,y4,7000);
 		
 		SVMII svm4 = new SVMII(0.0001);
-		trainFile = "E:\\作业\\数据仓储\\2\\simpleSvm-master\\simpleSvm-master\\train_3.data";
+		trainFile = "/Data/train_3.data";
 		svm4.loadData(X3,y3,trainFile, "WINDOW");
 		svm4.Train(X3,y3,7000);
 		
 		SVMII svm5 = new SVMII(0.0001);
-		trainFile = "E:\\作业\\数据仓储\\2\\simpleSvm-master\\simpleSvm-master\\train_2.data";
+		trainFile = "/Data/train_2.data";
 		svm5.loadData(X2,y2,trainFile, "PATH");
 		svm5.Train(X2,y2,7000);
 		
@@ -66,18 +66,11 @@ public class Main {
 		double[][] test_X2 = new double[testset_size][attr_num];
 		
 		
-		String testFile = "E:\\作业\\数据仓储\\2\\simpleSvm-master\\simpleSvm-master\\test_all.data";
+		String testFile = "/Data/test_all.data";
 		svm.loadData(test_X,test_y,testFile, "BRICKFACE");
-		testFile = "E:\\作业\\数据仓储\\2\\simpleSvm-master\\simpleSvm-master\\test_all.data";
 		svm1.loadData(test_X6,test_y6,testFile, "SKY");
-		testFile = "E:\\作业\\数据仓储\\2\\simpleSvm-master\\simpleSvm-master\\test_all.data";
-		svm2.loadData(test_X5,test_y5,testFile, "FOLIAGE");
-		
-		testFile = "E:\\作业\\数据仓储\\2\\simpleSvm-master\\simpleSvm-master\\test_all.data";
 		svm3.loadData(test_X4,test_y4,testFile, "CEMENT");
-		testFile = "E:\\作业\\数据仓储\\2\\simpleSvm-master\\simpleSvm-master\\test_all.data";
 		svm4.loadData(test_X3,test_y3,testFile, "WINDOW");
-		testFile = "E:\\作业\\数据仓储\\2\\simpleSvm-master\\simpleSvm-master\\test_all.data";
 		svm5.loadData(test_X2,test_y2,testFile, "PATH");
 		
 		//svm.Test(test_X, test_y);
